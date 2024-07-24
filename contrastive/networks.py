@@ -35,6 +35,7 @@ class ContrastiveNetworks:
   q_network: networks_lib.FeedForwardNetwork
   l_network: networks_lib.FeedForwardNetwork
   log_prob: networks_lib.LogProbFn
+  goal_fn: Callable[Ellipsis, networks_lib.NetworkOutput]
   repr_fn: Callable[Ellipsis, networks_lib.NetworkOutput]
   sample: networks_lib.SampleFn
   sample_eval: Optional[networks_lib.SampleFn] = None
@@ -174,6 +175,7 @@ def make_networks(
   critic = hk.without_apply_rng(hk.transform(_critic_fn))
   language = hk.without_apply_rng(hk.transform(_language_fn))
   repr_fn = hk.without_apply_rng(hk.transform(_repr_fn))
+  goal_fn = hk.without_apply_rng(hk.transform(_goal_fn))
 
   # Create dummy observations and actions to create network parameters.
   dummy_action = utils.zeros_like(spec.actions)
@@ -198,6 +200,7 @@ def make_networks(
           lambda key: critic.init(key, dummy_obs, dummy_action), critic.apply),
       l_network= networks_lib.FeedForwardNetwork(
           lambda key: language.init(key, dummy_goal, dummy_language), language.apply),
+      goal_fn=goal_fn.apply,
       repr_fn=repr_fn.apply,
       log_prob=lambda params, actions: params.log_prob(actions),
       sample=lambda params, key: params.sample(seed=key),
