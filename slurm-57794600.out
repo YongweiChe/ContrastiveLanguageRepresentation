@@ -1,0 +1,274 @@
+Warning: Flow failed to import. Set the environment variable D4RL_SUPPRESS_IMPORT_ERROR=1 to suppress this message.
+No module named 'flow'
+Warning: CARLA failed to import. Set the environment variable D4RL_SUPPRESS_IMPORT_ERROR=1 to suppress this message.
+No module named 'carla'
+pybullet build time: Nov 28 2023 23:52:03
+/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/gym/spaces/box.py:84: UserWarning: [33mWARN: Box bound precision lowered by casting to float32[0m
+  logger.warn(f"Box bound precision lowered by casting to {self.dtype}")
+I0724 17:06:16.613645 23130607007424 xla_bridge.py:448] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA Interpreter Host
+I0724 17:06:16.614012 23130607007424 xla_bridge.py:448] Unable to initialize backend 'tpu': module 'jaxlib.xla_extension' has no attribute 'get_tpu_client'
+I0724 17:06:16.614074 23130607007424 xla_bridge.py:448] Unable to initialize backend 'plugin': xla_extension has no attributes named get_plugin_device_client. Compile TensorFlow with //tensorflow/compiler/xla/python:enable_plugin_device set to true (defaults to false) to enable this.
+I0724 17:06:26.219080 23115262228224 courier_utils.py:50] Binding: run
+I0724 17:06:26.220692 23115262228224 lp_utils.py:88] StepsLimiter: Starting with max_steps = 1000000 (actor_steps)
+I0724 17:06:26.221044 23113395513088 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.358995 23044445697792 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.374372 23044443596544 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.379856 23113401816832 savers.py:165] Attempting to restore checkpoint: None
+I0724 17:06:26.386425 23044437292800 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.391986 23044426786560 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.393709 23044403672832 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.394630 23044388964096 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.396537 23044382660352 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.397694 23043904624384 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.398385 23113401816832 courier_utils.py:50] Binding: get_counts
+I0724 17:06:26.399606 23043883611904 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.402535 23043875206912 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.402795 23113401816832 courier_utils.py:50] Binding: get_directory
+I0724 17:06:26.402939 23043845789440 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.404911 23016767428352 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.406948 23043852093184 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.407142 23113401816832 courier_utils.py:50] Binding: increment
+I0724 17:06:26.407350 23016790542080 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.408833 23016794744576 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.409322 23016792643328 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.410037 23016761124608 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.411756 23016752719616 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.413465 23016754820864 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.413594 23113401816832 courier_utils.py:50] Binding: restore
+I0724 17:06:26.413759 23043849991936 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.416804 23014900987648 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.417424 23016763225856 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.418806 23016765327104 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.423625 23014865266432 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.426372 23113401816832 courier_utils.py:50] Binding: save
+I0724 17:06:26.426494 23012411655936 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.428436 23012401149696 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.430185 23012392744704 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.432600 23010803144448 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.436349 23010790536960 node.py:62] Reverb client connecting to: localhost:37949
+scaling factor set to 4.
+Target Goal:  (5.021817427036397, 13.267891617973081)
+config maze shape: (8, 8)
+Target Goal:  (13.061247034903547, 5.432077617000731)
+I0724 17:06:26.436716 23113401816832 savers.py:156] Saving checkpoint: /home/yongweic/acme/459a7a9c-4a00-11ef-bec2-ec2a72229220/checkpoints/counter
+I0724 17:06:26.439299 23012386440960 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.442641 23010687837952 node.py:62] Reverb client connecting to: localhost:37949
+I0724 17:06:26.445086 23010658420480 node.py:62] Reverb client connecting to: localhost:37949
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/launch/worker_manager.py", line 461, in _check_workers
+    worker.future.result()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/launch/worker_manager.py", line 238, in run_inner
+    future.set_result(f())
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/nodes/python/node.py", line 75, in _construct_function
+    return functools.partial(self._function, *args, **kwargs)()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/nodes/reverb/node.py", line 83, in run
+    priority_tables = self._priority_tables_fn()
+  File "/home/yongweic/unconscious/contrastive_rl/contrastive/distributed_layout.py", line 173, in replay
+    return self._builder.make_replay_tables(environment_spec)
+  File "/home/yongweic/unconscious/contrastive_rl/contrastive/builder.py", line 190, in make_replay_tables
+    limiter = rate_limiters.SampleToInsertRatio(
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/reverb/rate_limiters.py", line 118, in __init__
+    raise ValueError(
+ValueError: The size of error_buffer must be >= 2 * max(1.0, samples_per_insert) as smaller values could completely block samples and/or insert calls.
+I0724 17:06:27.182920 23130607007424 savers.py:207] Caught SIGTERM: forcing a checkpoint save.
+I0724 17:06:27.187722 23130607007424 savers.py:156] Saving checkpoint: /home/yongweic/acme/459a7a9c-4a00-11ef-bec2-ec2a72229220/checkpoints/counter
+/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/acme/jax/utils.py:73: UserWarning: Explicitly requested dtype float64 requested in zeros is not available, and will be truncated to dtype float32. To enable more dtypes, set the jax_enable_x64 configuration option or the JAX_ENABLE_X64 shell environment variable. See https://github.com/google/jax#current-gotchas for more.
+  return jax.tree_map(lambda x: jnp.zeros(x.shape, dtype or x.dtype), nest)
+I0724 17:06:27.356951 23012401149696 courier_utils.py:50] Binding: run
+I0724 17:06:27.357835 23016754820864 courier_utils.py:50] Binding: run
+I0724 17:06:27.396558 23016754820864 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.358239 23044403672832 courier_utils.py:50] Binding: run
+I0724 17:06:27.421240 23044403672832 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.360853 23016763225856 courier_utils.py:50] Binding: run
+I0724 17:06:27.448942 23016763225856 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.364577 23043883611904 courier_utils.py:50] Binding: run
+I0724 17:06:27.365537 23010687837952 courier_utils.py:50] Binding: run
+I0724 17:06:27.366140 23016767428352 courier_utils.py:50] Binding: run
+I0724 17:06:27.514473 23016767428352 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.368155 23012386440960 courier_utils.py:50] Binding: run
+I0724 17:06:27.558752 23012386440960 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.369374 23043852093184 courier_utils.py:50] Binding: run
+I0724 17:06:27.588279 23043852093184 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.376179 23043875206912 courier_utils.py:50] Binding: run
+I0724 17:06:27.613593 23043875206912 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.379092 23014865266432 courier_utils.py:50] Binding: run
+I0724 17:06:27.381152 23043904624384 courier_utils.py:50] Binding: run
+I0724 17:06:27.644261 23043904624384 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.381824 23014900987648 courier_utils.py:50] Binding: run
+I0724 17:06:27.645336 23014900987648 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.385608 23012411655936 courier_utils.py:50] Binding: run
+I0724 17:06:27.388026 23016765327104 courier_utils.py:50] Binding: run
+I0724 17:06:27.703785 23016765327104 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.392424 23010790536960 courier_utils.py:50] Binding: run
+I0724 17:06:27.731532 23010790536960 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.393129 23016792643328 courier_utils.py:50] Binding: run
+I0724 17:06:27.764240 23016792643328 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.393759 23012392744704 courier_utils.py:50] Binding: run
+I0724 17:06:27.792520 23012392744704 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.395294 23046998902528 csv.py:76] Logging to /home/yongweic/acme/459a7a9c-4a00-11ef-bec2-ec2a72229220/logs/evaluator/logs.csv
+I0724 17:06:27.793738 23046998902528 courier_utils.py:50] Binding: run
+I0724 17:06:27.793795 23046998902528 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.359220 23016752719616 courier_utils.py:50] Binding: run
+I0724 17:06:27.819978 23016752719616 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.451732 23043883611904 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.495104 23010658420480 courier_utils.py:50] Binding: run
+I0724 17:06:27.495310 23010687837952 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.368896 23044388964096 courier_utils.py:50] Binding: run
+I0724 17:06:27.370236 23044443596544 courier_utils.py:50] Binding: run
+I0724 17:06:27.939439 23044443596544 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.376600 23043845789440 courier_utils.py:50] Binding: run
+I0724 17:06:27.642582 23014865266432 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.384955 23044426786560 courier_utils.py:50] Binding: run
+I0724 17:06:27.965847 23044426786560 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.387113 23012401149696 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.391997 23016761124608 courier_utils.py:50] Binding: run
+I0724 17:06:27.392774 23044382660352 courier_utils.py:50] Binding: run
+I0724 17:06:27.395063 23044437292800 courier_utils.py:50] Binding: run
+I0724 17:06:28.096272 23044437292800 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.395990 23043849991936 courier_utils.py:50] Binding: run
+I0724 17:06:28.131793 23043849991936 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.359635 23016790542080 courier_utils.py:50] Binding: run
+I0724 17:06:27.872497 23010658420480 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.936640 23044388964096 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.380843 23010803144448 courier_utils.py:50] Binding: run
+I0724 17:06:27.941920 23043845789440 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.702954 23012411655936 courier_utils.py:50] Binding: run_episode
+I0724 17:06:28.073650 23016761124608 courier_utils.py:50] Binding: run_episode
+I0724 17:06:28.084511 23044382660352 courier_utils.py:50] Binding: run_episode
+I0724 17:06:27.396455 23044445697792 csv.py:76] Logging to /home/yongweic/acme/459a7a9c-4a00-11ef-bec2-ec2a72229220/logs/actor/logs.csv
+I0724 17:06:27.361404 23016794744576 courier_utils.py:50] Binding: run
+I0724 17:06:28.135229 23016790542080 courier_utils.py:50] Binding: run_episode
+I0724 17:06:28.162473 23010803144448 courier_utils.py:50] Binding: run_episode
+I0724 17:06:28.347987 23044445697792 courier_utils.py:50] Binding: run
+I0724 17:06:28.349803 23016794744576 courier_utils.py:50] Binding: run_episode
+I0724 17:06:28.409468 23044445697792 courier_utils.py:50] Binding: run_episode
+Exception ignored in: <module 'threading' from '/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/threading.py'>
+Traceback (most recent call last):
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/threading.py", line 1447, in _shutdown
+    atexit_call()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/launch/worker_manager.py", line 415, in wait
+    raise failure
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/launch/worker_manager.py", line 461, in _check_workers
+    worker.future.result()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/concurrent/futures/_base.py", line 439, in result
+    return self.__get_result()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/concurrent/futures/_base.py", line 391, in __get_result
+    raise self._exception
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/launch/worker_manager.py", line 238, in run_inner
+    future.set_result(f())
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/nodes/python/node.py", line 75, in _construct_function
+    return functools.partial(self._function, *args, **kwargs)()
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/launchpad/nodes/reverb/node.py", line 83, in run
+    priority_tables = self._priority_tables_fn()
+  File "/home/yongweic/unconscious/contrastive_rl/contrastive/distributed_layout.py", line 173, in replay
+    return self._builder.make_replay_tables(environment_spec)
+  File "/home/yongweic/unconscious/contrastive_rl/contrastive/builder.py", line 190, in make_replay_tables
+    limiter = rate_limiters.SampleToInsertRatio(
+  File "/home/yongweic/.conda/envs/contrastive_rl/lib/python3.9/site-packages/reverb/rate_limiters.py", line 118, in __init__
+    raise ValueError(
+ValueError: The size of error_buffer must be >= 2 * max(1.0, samples_per_insert) as smaller values could completely block samples and/or insert calls.
+Node ThreadWorker(thread=<Thread(replay, stopped daemon 23115260126976)>, future=<Future at 0x15088c06b3a0 state=finished raised ValueError>) crashed:
+Target Goal:  (8.961280787909054, 9.110300840282106)
+Target Goal:  (16.66363015113033, 20.284745950616408)
+Target Goal:  (12.400626850470543, 12.76288340233544)
+Target Goal:  (17.277127390754977, 20.251678871557566)
+Target Goal:  (16.657569606767396, 12.533590622423484)
+Target Goal:  (0.8017641752316695, 4.823283024912638)
+Target Goal:  (1.4371327511816059, 20.87871873963225)
+Target Goal:  (0.4723491088423125, 12.297916631120463)
+Target Goal:  (0.4631765271100923, 21.11080655572182)
+Target Goal:  (12.846677246893382, 12.639771529146538)
+Target Goal:  (1.2151403724754362, 21.076603173712094)
+Target Goal:  (16.8647818580533, 12.364133548764972)
+Target Goal:  (13.259039315517786, 13.008546553490627)
+Target Goal:  (17.179129640209407, 12.896157637433843)
+Target Goal:  (16.660747373216832, 12.736617008834893)
+Target Goal:  (8.205765145825069, 9.196573672802574)
+Target Goal:  (16.425273050653587, 13.473629647841042)
+Target Goal:  (0.6045811636950499, 5.021063681649072)
+Target Goal:  (21.013256112290453, 20.292496784321056)
+Target Goal:  (20.540594260385703, 0.8539516371138078)
+Target Goal:  (1.350146094102568, 12.8559888179004)
+Target Goal:  (12.859213876514653, 8.828019003043014)
+Target Goal:  (21.096485061381465, 4.865705261142508)
+Target Goal:  (16.96334985790412, 0.5829294401975598)
+Target Goal:  (20.33228136283136, 4.861324074513468)
+Target Goal:  (20.431868622991498, 4.447618591815402)
+Target Goal:  (20.68365370429295, 13.064387545046522)
+Target Goal:  (20.582259256075428, 0.5138037089811213)
+Target Goal:  (0.7409110920057791, 12.71803744829311)
+Waiting for workers to stop for 10s.Target Goal:  (16.42028036604145, 0.4497494276225447)
+Target Goal:  (13.0177533870177, 12.825347073532887)
+Target Goal:  (12.52400953906223, 8.527796673422067)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+maze_shape: (8, 8)
+Target Goal:  (12.502580238638297, 8.97721841182579)
+maze_shape: (8, 8)
+new goal: (17.204963740671456, 12.765079458364582)
+new goal: (13.33367453798986, 8.66438939039822)
+maze_shape: (8, 8)
+new goal: (4.941483480292009, 20.989230492966854)
+new goal: (20.76140023818673, 20.604331188330487)
+new goal: (16.12157286301627, 20.613278504189697)
+new goal: (12.26509454160766, 12.25349328653951)
+new goal: (16.242716601085593, 12.901366537907021)
+new goal: (1.0247817443988705, 20.3298853449361)
+new goal: (16.64954616994372, 12.453314558308788)
+new goal: (20.13040505589529, 13.349104215616784)
+new goal: (0.40151363371037185, 12.725629560397783)
+new goal: (12.735090889093458, 4.6752772264964255)
+new goal: (8.134955919366448, 8.932882109112604)
+new goal: (21.031844533152498, 17.373443120065808)
+new goal: (8.421609358140431, 16.640407891174778)
+new goal: (12.620793745377446, 8.547977624449773)
+new goal: (16.550935220995715, 5.03075782504412)
+new goal: (4.264700394523422, 8.122166984703878)
+new goal: (5.003667893735364, 20.917760291787943)
+new goal: (5.080030201494608, 4.743428462134092)
+new goal: (12.18416706258049, 16.929268441289043)
+new goal: (0.34201375126828953, 13.005343000641023)
+new goal: (16.681841199041344, 1.2927800092682202)
+new goal: (12.942155013286705, 12.977025283688604)
+new goal: (12.402969896746884, 8.643813075983381)
+new goal: (17.177595995340333, 4.656056686747351)
+new goal: (4.707714531743865, 5.16166187856086)
+new goal: (16.914498528437335, 0.7271962427979646)
+new goal: (5.182975359017926, 20.443825416506005)
+new goal: (5.098494352773713, 12.943852970954497)
+new goal: (12.529303494001896, 12.339189862913708)
+new goal: (20.58019853692625, 1.0430893434864794)
+new goal: (20.81791875897993, 12.764693318219146)
+/var/spool/slurmd/job57794600/slurm_script: line 22: 1070178 Alarm clock             python lp_contrastive.py

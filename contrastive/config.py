@@ -27,7 +27,7 @@ class ContrastiveConfig:
   """Configuration options for contrastive RL."""
 
   env_name: str = ''
-  max_number_of_steps: int = 1_000_000
+  max_number_of_steps: int = 5_000_000
   num_actors: int = 32
   language: bool = True
   scaling_factor: float = 1.
@@ -58,7 +58,7 @@ class ContrastiveConfig:
   # Rate to be used for the SampleToInsertRatio rate limitter tolerance.
   # See a formula in make_replay_tables for more details.
   samples_per_insert_tolerance_rate: float = 0.1
-  num_sgd_steps_per_step: int = 64  # Gradient updates to perform per step.
+  num_sgd_steps_per_step: int = 64  # Gradient updates to perform per step. ORIGINALLY 64
 
   repr_dim: Union[int, str] = 64  # Size of representation.
   use_random_actor: bool = True  # Initial with uniform random policy.

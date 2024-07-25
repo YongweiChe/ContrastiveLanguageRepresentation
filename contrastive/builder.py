@@ -187,6 +187,8 @@ class ContrastiveBuilder(builders.ActorLearnerBuilder):
     min_replay_traj = self._config.min_replay_size  // self._config.max_episode_steps  # pylint: disable=line-too-long
     max_replay_traj = self._config.max_replay_size  // self._config.max_episode_steps  # pylint: disable=line-too-long
     error_buffer = min_replay_traj * samples_per_insert_tolerance
+    # error_buffer = max(2 * max(1.0, self._config.samples_per_insert), error_buffer)
+    print(f'error buffer: {error_buffer}')
     limiter = rate_limiters.SampleToInsertRatio(
         min_size_to_sample=min_replay_traj,
         samples_per_insert=self._config.samples_per_insert,

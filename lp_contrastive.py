@@ -169,7 +169,9 @@ def main(_):
   if env_name.startswith('point'):
     params['scaling_factor'] = 1.
   else:
+    print(f'scaling factor set to 4.')
     params['scaling_factor'] = 4.
+  
   # For the offline RL experiments, modify some hyperparameters.
   if env_name.startswith('offline_ant'):
     params.update({

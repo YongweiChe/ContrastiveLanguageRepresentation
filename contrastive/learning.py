@@ -29,15 +29,14 @@ import jax
 import jax.numpy as jnp
 import optax
 import reverb
+import haiku as hk
 
 class TrainingState(NamedTuple):
   """Contains training state for the learner."""
   policy_optimizer_state: optax.OptState
   q_optimizer_state: optax.OptState
-  l_optimizer_state: optax.OptState
   policy_params: networks_lib.Params
   q_params: networks_lib.Params
-  l_params: networks_lib.Params
   target_q_params: networks_lib.Params
   key: networks_lib.PRNGKey
   alpha_optimizer_state: Optional[optax.OptState] = None
@@ -352,25 +351,30 @@ class ContrastiveLearner(acme.Learner):
 
         q_params = optax.apply_updates(state.q_params, critic_update)
 
-        new_target_q_params = jax.tree_util.tree_map(
-            lambda x, y: x * (1 - config.tau) + y * config.tau,
+        def weighted_update(path, x, y):
+          if any('g_encoder' in str(p) or 'sa_encoder' in str(p) for p in path):
+            return x * (1 - config.tau) + y * config.tau
+          else:
+            return x
+
+        new_target_q_params = jax.tree_util.tree_map_with_path(
+            weighted_update,
             state.target_q_params, q_params)
         metrics = critic_metrics
 
       # Apply language gradients
       if config.language:
         # print(f'in update, l_data is {l_data}')
-        l_params = state.l_params
-        l_optimizer_state = state.l_optimizer_state
-        l_loss, l_grads = l_grad(state.l_params, l_data)
-        # print(f'done with l_loss update')
-        l_update, l_optimizer_state = l_optimizer.update(
-            l_grads, state.l_optimizer_state)
+        
+        # Use shared params to update
 
-        l_params = optax.apply_updates(state.l_params, l_update)
+        l_loss, l_grads = l_grad(q_params, l_data)
+        # print(f'done with l_loss update')
+        l_update, q_optimizer_state = q_optimizer.update(
+            l_grads, q_optimizer_state)
+
+        q_params = optax.apply_updates(q_params, l_update)
       else:
-        l_optimizer_state = state.l_optimizer_state
-        l_params = state.l_params
         l_loss = 0.0
 
 
@@ -383,10 +387,8 @@ class ContrastiveLearner(acme.Learner):
       new_state = TrainingState(
           policy_optimizer_state=policy_optimizer_state,
           q_optimizer_state=q_optimizer_state,
-          l_optimizer_state = l_optimizer_state,
           policy_params=policy_params,
           q_params=q_params,
-          l_params=l_params,
           target_q_params=new_target_q_params,
           key=key,
       )
@@ -435,19 +437,23 @@ class ContrastiveLearner(acme.Learner):
       policy_optimizer_state = policy_optimizer.init(policy_params)
 
       q_params = networks.q_network.init(key_q)
-      q_optimizer_state = q_optimizer.init(q_params)
-
       l_params = networks.l_network.init(key_l)
-      l_optimizer_state = l_optimizer.init(l_params)
+      ql_params = hk.data_structures.merge(q_params, l_params)
+
+      print(f'q_params: {q_params.keys()}')
+      print(f'l_params: {l_params.keys()}')
+      print(f'merged_params: {ql_params.keys()}')
+
+      q_optimizer_state = q_optimizer.init(ql_params)
+
+      # l_optimizer_state = l_optimizer.init(l_params)
 
       state = TrainingState(
           policy_optimizer_state=policy_optimizer_state,
           q_optimizer_state=q_optimizer_state,
-          l_optimizer_state=l_optimizer_state,
           policy_params=policy_params,
-          q_params=q_params,
-          target_q_params=q_params,
-          l_params=l_params,
+          q_params=ql_params,
+          target_q_params=ql_params,
           key=key)
 
       if adaptive_entropy_coefficient:

@@ -111,7 +111,7 @@ def default_evaluator_factory(
 class CheckpointingConfig:
   """Configuration options for learner checkpointer."""
   # The maximum number of checkpoints to keep.
-  max_to_keep: int = 1
+  max_to_keep: int = 5
   # Which directory to put the checkpoint in.
   directory: str = '~/acme'
   # If True adds a UID to the checkpoint path, see
@@ -254,7 +254,7 @@ class DistributedLayout:
         learner,
         key='learner',
         subdirectory='learner',
-        time_delta_minutes=5,
+        time_delta_minutes=2,
         **kwargs)
 
   def actor(self, random_key, replay,
